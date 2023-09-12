@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="container">
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>이름</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- model로 넘긴 members 값을 꺼내어 루프를 돈다. -->
+				<tr th:each="member : ${members}">
+					<!-- id를 꺼낸다. -->
+					<td th:text="${member.id}"></td>
+					<!-- name을 꺼낸다. -->
+					<td th:text="${member.name}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div> <!-- /container -->
+
+</body>
+</html>
